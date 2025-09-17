@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Koperasi ICARE</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;0,400;0,700;1,700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- feather Icons -->
+    <script src="https://unpkg.com/feather-icons"></script>
+
+    <!-- my style -->
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <!-- Navbar start -->
+    <nav class="navbar">
+      <a href="#" class="navbar-logo">Koperasi<span> ICARE</span></a>
+      <div class="navbar-nav">
+        <a href="#home">Home</a>
+        <a href="#about">Tentang Kami</a>
+        <a href="#menu">Menu</a>
+        <a href="#contact">Kontak</a>
+      </div>
+
+      <div class="navbar-extra">
+        <a href="#" id="search"><i data-feather="search"></i></a>
+        <a href="#" id="shopping-cart"><i data-feather="shopping-cart"></i></a>
+        <a href="#" id="hamburger-menu"><i data-feather="menu"></i></a>
+      </div>
+    </nav>
+
+    <!-- Search Form -->
+    <div class="search-form" id="search-form">
+      <input type="text" id="search-input" placeholder="Cari produk..." />
+      <button onclick="searchData()">Cari</button>
+    </div>
+
+    <!-- Navbar end -->
+
+    <!-- Hero sction start -->
+    <section class="hero" id="home">
+      <main class="content">
+        <h1>Koperasi<span> Maju Mandiri Moderen Tanak Rarang</span></h1>
+        <p>Koperasi Konsumen Syariah.</p>
+        <a href="#contact" class="cta">Beli Sekarang</a>
+      </main>
+    </section>
+    <!-- Hero sction end -->
+
+    <!-- About section start -->
+    <section id="about" class="about">
+      <h2><span>Tentang</span> Kami</h2>
+      <div class="row">
+        <div class="about-img">
+          <img src="img/kantor 3M.png" alt="Tentang Kami" />
+        </div>
+
+        <div class="content">
+          <h3>Profil Koperasi Kami</h3>
+          <p>
+            Koperasi Maju Mandiri Moderen didirikan pada tanggal 19 Agustus 2023
+            dengan No AHU-0003384.AH.01.29. TAHUN 2023 di dusun Senyong
+            Desa Tanak Rarang Kecamatan Praya Barat beranggotakan 131 orang yang terdiri
+            dari petani dewasa laki-laki sebanyak 92 dan perempuan 29 orang,
+            dimana diantaranya terdapat pria milenial 21 orang dan perempuan
+            milenial 15 orang. Adapun dalam pendiriannya koperasi memiliki visi
+            yaitu menjadi Koperasi yang Maju, Mandi, dan Moderen serta dapat menegembangakan
+            koperasi menjadi lebih baik agar bisa memberikan kesejahteraan bagi anggota.
+            sedangkan misi dari koperasi maju mandiri moderen adalah 1) Menciptakan kesejahteraan
+            bagi anggota yang berkesinambungan; 2) Berdaya guna sebagai mitra strategis dan terpercaya bagi
+            anggota; 3) Berkontribusi dalam perkembangan perkoperasian di Indonesia; 4) Mengelola Koperasi dan 
+            Unit Usaha secara profesional dengan menerapkan prinsip “Good Corporate Governance” dengan Tata 
+            Pengelolaan Perusahaan yang baik. 
+          </p>
+          <p>
+            Usaha Agribisnis jagung (Kegiatan Utama: Pemasaran jagung, Kegiatan
+            pendukung : pelayanan saprodi, budidaya jagung, jasa alsintan,
+            
+          </p>
+        </div>
+      </div>
+    </section>
+    <!-- About section end -->
+
+    <!-- Menu section start -->
+
+    <section id="menu" class="menu">
+      <h2><span>Produk</span> Kami</h2>
+      <p>
+        Pilih produk favorit Anda selama stock tersedia-Harga dapat berubah
+        sewaktu-waktu sesuai harga pasar-Pelayanan Purna jual dengan syarat dan
+        ketentuan berlaku.
+      </p>
+      <div class="row">
+        <div class="menu-card">
+          <img src="img/menu/pipil.jpeg" alt="jagung-pipil" class="menu-card-img" />
+          <h3 class="menu-card-title">- Jagung Pipil -</h3>
+          <p class="menu-card-price">IDR 8K/KG</p>
+          <button onclick="addToCart('Jagung Pipil', 8000)">Tambah</button>
+        </div>
+        <div class="menu-card">
+          <img src="img/menu/saprodi.jpeg" alt="saprodi pertanian " class="menu-card-img" />
+          <h3 class="menu-card-title">- Saprodi Pertanian -</h3>
+          <p class="menu-card-price">IDR -</p>
+          <button onclick="addToCart('saprodi pertanian', -)">Tambah</button>
+        </div>
+        <div class="menu-card">
+          <img src="img/menu/jasa pipil.jpeg" alt="Jasa Pipil" class="menu-card-img" />
+          <h3 class="menu-card-title">- Jasa Pipil -</h3>
+          <p class="menu-card-price">IDR 35K/kwintal</p>
+          <button onclick="addToCart('Jasa Pipil', 35000)">Tambah</button>
+        </div>
+        <div class="menu-card">
+          <img src="img/menu/jasa tanam j.jpeg" alt="Jasa Alat Tanam" class="menu-card-img" />
+          <h3 class="menu-card-title">- Jasa Alat Tanam -</h3>
+          <p class="menu-card-price">
+            IDR 10K/KG
+            <button onclick="addToCart('jasa Alat Tanam', 10000)">Tambah</button>
+          </p>
+        </div>
+        <div class="menu-card">
+          <img src="img/menu/jasa semprot.jpeg" alt="Jasa Alat Semprot" class="menu-card-img" />
+          <h3 class="menu-card-title">- Jasa Semprot -</h3>
+          <p class="menu-card-price">
+            IDR 10K/Rombong
+            <button onclick="addToCart('Jasa Alat Semprot', 10000)">Tambah</button>
+          </p>
+        
+      </div>
+    </section>
+
+    <!-- Menu section end -->
+
+    <!-- Shopping Cart Section start-->
+    <section id="cart" class="menu">
+      <h2><span>Keranjang</span> Belanja</h2>
+      <ul id="cart-items"></ul>
+      <p>
+        <strong>Total: Rp <span id="cart-total">0</span></strong>
+      </p>
+    </section>
+
+    <script>
+      let cart = [];
+
+      function addToCart(name, price) {
+        // cek kalau produk sudah ada, tambahkan jumlah
+        let existing = cart.find((item) => item.name === name);
+        if (existing) {
+          existing.quantity++;
+        } else {
+          cart.push({ name, price, quantity: 1 });
+        }
+        renderCart();
+      }
+
+      function removeFromCart(index) {
+        cart.splice(index, 1);
+        renderCart();
+      }
+
+      function updateQuantity(index, newQty) {
+        if (newQty <= 0) {
+          removeFromCart(index);
+        } else {
+          cart[index].quantity = newQty;
+        }
+        renderCart();
+      }
+
+      function renderCart() {
+        const cartItems = document.getElementById("cart-items");
+        cartItems.innerHTML = "";
+        let total = 0;
+
+        cart.forEach((item, index) => {
+          let li = document.createElement("li");
+          li.innerHTML = `
+        ${item.name} - Rp ${item.price} x 
+        <input type="number" min="1" value="${item.quantity}" 
+               onchange="updateQuantity(${index}, this.value)">
+        = Rp ${item.price * item.quantity}
+        <button onclick="removeFromCart(${index})">Hapus</button>
+      `;
+          cartItems.appendChild(li);
+          total += item.price * item.quantity;
+        });
+
+        document.getElementById("cart-total").textContent = total;
+      }
+    </script>
+
+    <!-- Shopping Cart Section end -->
+
+    <!-- Contact Section Start -->
+    <section id="contact" class="contact">
+      <h2><span>Kontak</span> Kami</h2>
+      <p>Silakan isi form di bawah untuk menghubungi kami.</p>
+      <div class="row">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d210.3159925412089!2d116.29143683594583!3d-8.685076153294137!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dcdb184d3a7251d%3A0x7a6c6c1c9ca655df!2sKelompok%20tani!5e1!3m2!1sen!2sid!4v1756197455333!5m2!1sen!2sid"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          class="map"
+        ></iframe>
+        <form
+          action="https://forms.gle/aZM2xvpzwFGLpA2DA"
+          method="POST"
+          target="_blank"
+          id="contactForm"
+        >
+          <div class="input-group">
+            <i data-feather="user"></i>
+            <input
+              type="text"
+              name="entry.1793450906"
+              placeholder="nama"
+              required
+            />
+          </div>
+          <div class="input-group">
+            <i data-feather="mail"></i>
+            <input
+              type="email"
+              name="entry.980399524"
+              placeholder="Email"
+              required
+            />
+          </div>
+          <div class="input-group">
+            <i data-feather="phone"></i>
+            <input type="text" name="entry.453792825" placeholder="no-telp" />
+          </div>
+          <div class="input-group">
+            <i data-feather="message-square"></i>
+            <textarea
+              name="entry.1905674070"
+              placeholder="Pesan"
+              required
+            ></textarea>
+          </div>
+          <button type="submit" id="submitBtn" class="btn">Kirim Pesan</button>
+          <p id="formMessage" class="fade-msg"></p>
+        </form>
+      </div>
+    </section>
+    <!-- Contact Section End -->
+
+    <!-- Footer section Start -->
+    <footer>
+      <div class="social">
+        <a href="https://www.instagram.com/putucakra01?igsh=bjY3bmw2a3o3eG1h"
+          ><i data-feather="instagram"></i
+        ></a>
+        <a
+          href="https://www.tiktok.com/@username"
+          target="_blank"
+          aria-label="tiktok"
+        >
+          <img src="img/tiktok.png" alt="tiktok" class="tiktok-icon" />
+        </a>
+        <a href="https://www.facebook.com/aaripinnapsiah"
+          ><i data-feather="facebook"></i
+        ></a>
+      </div>
+
+      <div class="links">
+        <a href="#home">Home</a>
+        <a href="#about">Tentang Kami</a>
+        <a href="#menu">Menu Kami</a>
+        <a href="#contact">Kontak Kami</a>
+      </div>
+
+      <div class="credit">
+        <p>created by <a href="">Sapriadi</a>. &copy; 2025</p>
+      </div>
+    </footer>
+    <script></script>
+
+    <!-- Footer section End -->
+
+    <!-- My Javascript -->
+    <script src="js/script.js"></script>
+
+    <script>
+      const form = document.getElementById("contactForm");
+      const msg = document.getElementById("formMessage");
+
+      form.addEventListener("submit", function (e) {
+        e.preventDefault(); // cegah pindah halaman
+
+        const formData = new FormData(form);
+
+        fetch(
+          "https://docs.google.com/forms/d/e/1FAIpQLSeU1xoSGdzUV8Ous1Mweww1qscEve1JjUXjRi7e6Ea57bNirg/formResponse",
+          {
+            method: "POST",
+            body: formData,
+            mode: "no-cors",
+          }
+        )
+          .then(() => {
+            msg.style.display = "block"; // tampilkan pesan sukses
+            form.reset(); // kosongkan form
+          })
+          .catch(() => {
+            msg.style.display = "block";
+            msg.style.color = "red";
+            msg.textContent = "❌ Gagal mengirim, coba lagi!";
+          });
+      });
+    </script>
+
+    <!-- JavaScript (tombol loading + pesan sukses/error) -->
+
+    <script>
+      const form = document.getElementById("contactForm");
+      const msg = document.getElementById("formMessage");
+      const btn = document.getElementById("submitBtn");
+
+      form.addEventListener("submit", function (e) {
+        e.preventDefault();
+
+        const formData = new FormData(form);
+
+        // Ubah tombol jadi "Mengirim..."
+        btn.disabled = true;
+        btn.textContent = "Mengirim...";
+
+        fetch(form.action, {
+          method: "POST",
+          body: formData,
+          mode: "no-cors",
+        })
+          .then(() => {
+            msg.textContent = "✅ Pesan berhasil dikirim!";
+            msg.style.color = "lightgreen";
+            msg.classList.add("show");
+            form.reset();
+          })
+          .catch(() => {
+            msg.textContent = "❌ Gagal mengirim, coba lagi!";
+            msg.style.color = "red";
+            msg.classList.add("show");
+          })
+          .finally(() => {
+            btn.disabled = false;
+            btn.textContent = "Kirim Pesan";
+          });
+      });
+    </script>
+  </body>
+</html>
